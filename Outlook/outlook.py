@@ -5,10 +5,11 @@ credentials = ('client_id', 'client_secret')
 account = Account(credentials)
 
 # Send Email
-m = account.new_message()
-m.to_add('to_email@example.com')
-m.subject = 'Test!'
-m.body = "This is a test message"
-m.send()
+def send_email(send_to_address, subject, body):
+    m = account.new_message()
+    m.to_add(send_to_address)
+    m.subject = subject
+    m.body = body
+    m.send()
 
 # Retrieve Email
