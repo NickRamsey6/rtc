@@ -17,6 +17,10 @@ print(wb.sheetnames)
 print(wb['Sheet1'])
 ws = wb['Sheet1']
 
+# Create new sheet
+wb.create_sheet('New_Sheet')
+wb.save(path)
+
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
     df = dataframe
