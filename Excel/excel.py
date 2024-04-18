@@ -9,8 +9,13 @@ ws = wb.active
 print(ws['A1'].value)
 
 # Modify specific cells
-ws['A1'].value = 'Test'
+ws['A1'] = 'Test'
 wb.save(path)
+
+# Access specific sheets
+print(wb.sheetnames)
+print(wb['Sheet1'])
+ws = wb['Sheet1']
 
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
