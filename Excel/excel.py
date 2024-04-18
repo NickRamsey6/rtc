@@ -21,6 +21,13 @@ ws = wb['Sheet1']
 wb.create_sheet('New_Sheet')
 wb.save(path)
 
+# Create new workbook
+wb = Workbook()
+ws = wb.active
+ws.title = 'Data'
+ws.append(['Col1', 'Col2', 'Col3'])
+wb.save(path)
+
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
     df = dataframe
