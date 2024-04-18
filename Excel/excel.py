@@ -8,6 +8,10 @@ ws = wb.active
 # Access specific cells
 print(ws['A1'].value)
 
+# Modify specific cells
+ws['A1'].value = 'Test'
+wb.save(path)
+
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
     df = dataframe
