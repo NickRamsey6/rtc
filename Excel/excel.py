@@ -1,4 +1,12 @@
 import pandas as pd
+from openpyxl import Workbook, load_workbook
+
+# Load workbook
+wb = load_workbook('path')
+ws = wb.active
+
+
+
 
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
