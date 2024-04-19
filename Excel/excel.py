@@ -39,6 +39,7 @@ for row in range(1, 11):
 
 # Merge cells
 ws.merge_cells('A1:D1')
+# ws.unmerge_cells('A1:D1')
 wb.save(path)
 
 # Create new csv with only the duplicated rows
