@@ -34,6 +34,12 @@ for row in range(1, 11):
     for col in range(1, 5):
         char = get_column_letter(col)
         print(ws[char + str(row)].value)
+        # Change values need to save after
+        # ws[char + str(row)] = 'new value'
+
+# Merge cells
+ws.merge_cells('A1:D1')
+wb.save(path)
 
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
