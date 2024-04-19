@@ -42,6 +42,10 @@ ws.merge_cells('A1:D1')
 # ws.unmerge_cells('A1:D1')
 wb.save(path)
 
+# Insert Empty row
+ws.insert_rows(7)
+# Insert empty row after row 7
+
 # Create new csv with only the duplicated rows
 def get_dupes_df(dataframe):
     df = dataframe
